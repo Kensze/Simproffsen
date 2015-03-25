@@ -6,7 +6,7 @@
 		<div class="col-md-10 col-md-offset-1">
 			<div class="panel panel-default">
 				<div class="panel-heading">Home</div>
-
+					{{ HTML::image('img/picture.jpg') }}
 				<div class="panel-body">
 					You are logged in!
 				</div>
