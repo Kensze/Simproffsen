@@ -6223,11 +6223,10 @@ label,
 }
 footer{
   width:100%;
-  border-top: 2px dotted #4AABDB;
+  border-top: 2px solid #4AABDB;
   position: absolute;
   margin-top: 100%;
   height: auto;
-  background-color: #ADDEE4;
 
 }
 #left{
