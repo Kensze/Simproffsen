@@ -33,52 +33,48 @@
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-
 					<li>
-						<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+						<a class="btn btn-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
   						Dam
 						</a>
 					</li>
 					<li>
-						<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+						<a class="btn btn-primary" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
   						Herr
 						</a>
 					</li>				
 					<li>
-						<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+						<a class="btn btn-primary" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
   						Övrigt
 						</a>
 					</li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
-					@if (Auth::guest())
 						<li><a href="{{ url('/') }}">Kontakt</a></li>
 						<li><a href="{{ url('/') }}">Om oss</a></li>
-					@else
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
-							</ul>
-						</li>
-					@endif
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<div class="collapse" id="collapseExample">
-  	<div class="well">
-    	...
+	<div class="collapse" id="collapseOne">
+  		<div class="well">
+    		HEJ
+    	</div>
  	</div>
-	</div>
-
 	<!--@yield('content')-->
 
 	<!-- Scripts -->
-	<div id='footer'>aasdasdsa</div>
+	<footer>
+		<div id="left">
+			<p>Hej</p>
+		</div>
+		<div id="right">
+			<p>Hejsan</p>
+			<p>HEEEEEJ</p>
+		</div>
+	</footer>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
 </body>
 </html>

@@ -12,7 +12,6 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 main,
@@ -6222,12 +6221,22 @@ label,
 .checkbox label {
   font-weight: 300;
 }
-#footer{
-  width:50%;
-  height: auto;
-  min-height: 50px;
-  background-color: #fff;
-  margin: auto;
+footer{
+  width:100%;
+  border-top: 2px dotted #4AABDB;
+  position: absolute;
   margin-top: 100%;
-  border-top: 1px solid #e7e7e7;
+  height: auto;
+  background-color: #ADDEE4;
+
+}
+#left{
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+#right{
+  float: right;
+  width: 50%;
+  text-align: center;
 }
