@@ -19,6 +19,8 @@
 	<![endif]-->
 </head>
 <body>
+
+	
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -62,8 +64,14 @@
     		HEJ
     	</div>
  	</div>
-	<!--@yield('content')-->
-
+ 		<div class="collapse" id="collapseTwo">
+  		<div class="well">
+    		Då
+    	</div>
+ 	</div>
+<div id="content">
+	@yield('content')
+</div>
 	<!-- Scripts -->
 	<footer>
 		<div id="left">

@@ -6043,6 +6043,9 @@ button.close {
   td.visible-xs {
     display: table-cell !important;
   }
+  .btn-primary{
+    text-align: left;
+  }
 }
 @media (max-width: 767px) {
   .visible-xs-block {
