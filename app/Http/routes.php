@@ -11,4 +11,4 @@
 |
 */
 
-Route::get('home', 'PageController@home');
+Route::get('/', 'PageController@home'); 
