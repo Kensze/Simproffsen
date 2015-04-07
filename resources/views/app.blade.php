@@ -53,12 +53,15 @@
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
-						<li><a href="{{ url('/') }}">Kontakt</a></li>
-						<li><a href="{{ url('/') }}">Om oss</a></li>
+						<li><a class="btn btn-primary" href="#">Kontakt</a></li>
+						<li><a class="btn btn-primary" href="#">Om oss</a></li>
+						<li><a href="#" <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+						<li><a href="#" <span class="glyphicon glyphicon-search"></span></a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+
 	<div class="collapse" id="collapseOne">
   		<div class="well">
     		HEJ
@@ -69,11 +72,14 @@
     		Då
     	</div>
  	</div>
-<div id="content">
+ 	<div id="content">
 	@yield('content')
-</div>
+	</div>
+
 	<!-- Scripts -->
+
 	<footer>
+		<hr />
 		<div id="left">
 			<p>Hej</p>
 		</div>

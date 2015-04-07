@@ -11,5 +11,9 @@ class PageController extends Controller {
 	{
 		return view('pages.home');
 	}
+	public function product()
+	{
+		return view('pages.product');
+	}
 
 }

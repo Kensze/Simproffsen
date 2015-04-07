@@ -11,4 +11,8 @@
 |
 */
 
-Route::get('/', 'PageController@home'); 
+Route::get('/', 'PageController@home');
+
+Route::get('/product/', 'PageController@product');
+
+
