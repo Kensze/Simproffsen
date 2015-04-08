@@ -19,8 +19,11 @@
 	<![endif]-->
 </head>
 <body>
-
-	
+<div class="collapse" id="collapsecart">
+<div class="well">
+    HEJ
+</div>
+</div>
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -55,29 +58,17 @@
 				<ul class="nav navbar-nav navbar-right">
 						<li><a class="btn btn-primary" href="#">Kontakt</a></li>
 						<li><a class="btn btn-primary" href="#">Om oss</a></li>
-						<li><a href="#" <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+						<li><a data-toggle="collapse" href="#collapsecart" aria-expanded="false" aria-control="collapsecart" <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
 						<li><a href="#" <span class="glyphicon glyphicon-search"></span></a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-	<div class="collapse" id="collapseOne">
-  		<div class="well">
-    		HEJ
-    	</div>
- 	</div>
- 		<div class="collapse" id="collapseTwo">
-  		<div class="well">
-    		Då
-    	</div>
- 	</div>
+
  	<div id="content">
 	@yield('content')
 	</div>
-
-	<!-- Scripts -->
-
 	<footer>
 		<hr />
 		<div id="left">
@@ -88,6 +79,7 @@
 			<p>HEEEEEJ</p>
 		</div>
 	</footer>
+<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
