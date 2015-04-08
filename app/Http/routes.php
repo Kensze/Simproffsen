@@ -15,4 +15,5 @@ Route::get('/', 'PageController@home');
 
 Route::get('/product/', 'PageController@product');
 
+Route::get('/cart', 'cartController@index');
 
