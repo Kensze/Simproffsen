@@ -17,4 +17,6 @@ Route::get('/product/', 'PageController@product');
 
 Route::get('/cart', 'cartController@index');
 
+Route::post('/cart/update', 'cartController@update');
+
 

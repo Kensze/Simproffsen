@@ -1,7 +1,6 @@
 @extends('app')
 
 @section('content')
-<div id="content" height="500px">
 <table>
     <thead>
         <tr>
@@ -13,29 +12,30 @@
     </thead>
 
     <tbody>
+
+<p>
+{!! Form::open(array('url'=>'cart/updatecart')) !!}
+{{ Form::hidden('quantity', 1) }}
+{{ Form::hidden('id', $cart[o] => id) }}
+<button type="submit" class="cart-btn">ADD TO CART</button>
+
+{!! Form::close() !!}
+</p>
+
+
     <?php foreach($cart as $row) :?>
         <tr>
             <td>
                 <p><strong><?php echo $row->name;?></strong></p>
-                <p><?php echo ($row->options->has('size') ? $row->size : '');?></p>
+                <p><?php echo ($row->options->has('size') ? $row->options->size : '');?></p>
             </td>
             <td><input type="text" value="<?php echo $row->qty;?>"></td>
             <td>$<?php echo $row->price;?></td>
             <td>$<?php echo $row->subtotal;?></td>
-            <td>
-                  {!! Form::open(array('url' => '/cart/update')) !!}
-                  {!! Form::hidden('id', $row->rowid) !!}
-                  {!! Form::text('size', $row->size) !!}
-                  {!! Form::select('size', array('L' => 'Large', 'S' => 'Small')) !!}
-                  {!! Form::text('quantity', $row->qty) !!}
-                  {!! Form::submit('uppadatera') !!}
-                  {!! Form::close() !!}
-            </td>
        </tr>
 
     <?php endforeach;?>
 
     </tbody>
       </table>
-</div>
 @endsection
