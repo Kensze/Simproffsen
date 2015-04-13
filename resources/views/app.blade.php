@@ -20,9 +20,7 @@
 </head>
 <body>
 <div class="collapse" id="collapsecart">
-<div class="well">
 	@include('pages.incollapsed')
-</div>
 </div>
 <div class="collapse" id="collapsesearch">
 <input type="text" placeholder="Sök" id="well_search" autofocus />
