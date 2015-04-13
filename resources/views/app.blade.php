@@ -24,6 +24,9 @@
 	@include('pages.incollapsed')
 </div>
 </div>
+<div class="collapse" id="collapsesearch">
+<input type="text" placeholder="Sök" id="well_search" autofocus />
+</div>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -35,21 +38,19 @@
         </button>
         <a class="navbar-brand" href="{{ url('/') }}">{!! HTML::image('img/logo.png') !!}</a>
       </div>
-
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li>
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <a class="btn btn-primary">
               Dam
             </a>
           </li>
           <li>
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <a class="btn btn-primary">
               Herr
             </a>
           </li>				
           <li>
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <a class="btn btn-primary">
               Övrigt
             </a>
           </li>
@@ -59,9 +60,8 @@
             <li><a class="btn btn-primary" href="#">Kontakt</a></li>
             <li><a class="btn btn-primary" href="#">Om oss</a></li>
             <li><a data-toggle="collapse" href="#collapsecart" aria-expanded="false" aria-control="collapsecart" <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-            <li><a href="#" <span class="glyphicon glyphicon-search"></span></a></li>
+            <li><a data-toggle="collapse" href="#collapsesearch" aria-expanded="false" aria-control="collapsesearch" <span class="glyphicon glyphicon-search"></span></a></li>
         </ul>
-      </div>
     </div>
   </nav>
 

@@ -5333,6 +5333,19 @@ a.list-group-item-danger.active:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   border-bottom: 2px solid #02B2D8;
 }
+#well_search {
+  padding: 19px;
+  margin: 0;
+  height: auto;
+  background-color: #EEEEEE;
+  width: 100%;
+  border: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+
+}
+input:focus {
+  outline: none; 
+}
 .well blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
@@ -6252,9 +6265,12 @@ footer{
 
 #product_box{
   width: 60%;
-  border: 1px solid #777777;
   padding: 15px;
   float: left;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 #product_id{
   width: 50%;
@@ -6276,7 +6292,32 @@ footer{
   float: right;
   min-height: 150px;
   width: 30%;
-  border: 1px solid #777777;
   padding: 15px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+
+}
+#trash_cart{
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #D1D1D1;
+  float: left;
+  padding: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+#continue_check_out{
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #D1D1D1;
+  float: left;
+  padding: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+#trash_cart:hover, #continue_check_out:hover{
+  background-color: #09AFD8;
+  color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 
 }

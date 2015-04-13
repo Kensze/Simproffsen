@@ -22,6 +22,6 @@ class cartController extends Controller {
     $cart = Cart::content();
 
 
-    return View::make('pages.incollapsed')->with('cart', $cart);
+    return view('cart');
   }
 }

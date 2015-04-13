@@ -22,6 +22,9 @@
             <td><input type="text" value="<?php echo $row->qty;?>"></td>
             <td>$<?php echo $row->price;?></td>
             <td>$<?php echo $row->subtotal;?></td>
+            <td>
+
+            </td>
        </tr>
 
     <?php endforeach;?>
