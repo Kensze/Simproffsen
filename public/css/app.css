@@ -3064,6 +3064,7 @@ fieldset[disabled] .btn-link:focus {
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
+  
 }
 .btn-sm,
 .btn-group-sm > .btn {
@@ -6247,4 +6248,35 @@ footer{
 }
 #wrapper{
   height: 100%;
+}
+
+#product_box{
+  width: 60%;
+  border: 1px solid #777777;
+  padding: 15px;
+  float: left;
+}
+#product_id{
+  width: 50%;
+  float: left;
+
+}
+#product_count{
+  width: 15%;
+  float: left;
+}
+#product_cost_total{
+  width: 35%;
+  float: right;
+}
+#content{
+  min-height: 500px;
+}
+#total_box{
+  float: right;
+  min-height: 150px;
+  width: 30%;
+  border: 1px solid #777777;
+  padding: 15px;
+
 }

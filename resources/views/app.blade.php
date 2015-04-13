@@ -21,7 +21,7 @@
 <body>
 <div class="collapse" id="collapsecart">
 <div class="well">
-    HEJ
+	@include('pages.incollapsed')
 </div>
 </div>
   <nav class="navbar navbar-default">

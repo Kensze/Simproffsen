@@ -9,11 +9,11 @@ class PageController extends Controller {
 
 	public function home()
 	{
+
 		return view('pages.home');
 	}
 	public function product()
 	{
 		return view('pages.product');
 	}
-
 }
