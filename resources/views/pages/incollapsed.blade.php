@@ -15,47 +15,36 @@
 	    {!! Form::hidden('id', $row->rowid) !!}
 		<div id="product_id">
 			<p>{!! $row->name; !!}</p>
+			
 		</div>
 		<div id="product_count">
-			<p></p>
-			{!! Form::select('size', array('L' => 'Large', 'S' => 'Small')) !!}
-	        {!! Form::text('quantity', $row->qty) !!}
+			<p>{!! Form::text('quantity', $row->qty) !!}</p>
+			<p>{!! Form::select('size', array('L' => 'Large', 'S' => 'Small'), $row->size) !!}</p> 
 		</div>
 		<div id="product_cost_total">
-			<p> Totalt </p>
+			<p> {!! $row->subtotal; !!} </p>
+			<p>{!! Form::submit('uppadatera') !!}</p>
+	    	{!! Form::close() !!}
 		</div>
-	        <tr>
-	            <td>
-	                <p><strong></strong></p>
-	                <p><?php echo ($row->options->has('size') ? $row->size : '');?></p>
-	            </td>
-	            <td><input type="text" value="<?php echo $row->qty;?>"></td>
-	            <td>$<?php echo $row->price;?></td>
-	            <td>$<?php echo $row->subtotal;?></td>
-	            <td>
 	                  
-	                  {!! Form::text('size', $row->size) !!}
-	                  
-	                  {!! Form::submit('uppadatera') !!}
-	                  {!! Form::close() !!}
-	            </td>
-	       </tr>
+	    
+	    
 
    		<?php endforeach;?>
 	<?php endif ?>
-	<?php echo $_SERVER['REQUEST_URI'];?>
 	
 
 </div>
 <div id="total_box">
-Hejsan
+{!! Cart::total() !!}
   
 </div>
 </div>
 <div id="buttons">
-<button type="button" id="trash_cart">
+<button type="button" id="trash_cart" onclick="{!! Cart::destroy() !!}">
   <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
   Töm varukorgen
+
 </button>
 <button type="button" id="continue_check_out">
   <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
