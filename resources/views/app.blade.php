@@ -21,6 +21,7 @@
 <body>
 <div class="collapse" id="collapsecart">
 	@include('pages.incollapsed')
+  
 </div>
 <div class="collapse" id="collapsesearch">
 <input type="text" placeholder="Sök" id="well_search" autofocus />
@@ -55,6 +56,9 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
+            {!! Form::open(array('url' => '/cart')) !!}
+            {!! Form::submit('uppadatera') !!}
+            {!! Form::close() !!}
             <li><a class="btn btn-primary" href="#">Kontakt</a></li>
             <li><a class="btn btn-primary" href="#">Om oss</a></li>
             <li><a data-toggle="collapse" href="#collapsecart" aria-expanded="false" aria-control="collapsecart" <span class="glyphicon glyphicon-shopping-cart"></span></a></li>

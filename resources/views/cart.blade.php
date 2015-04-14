@@ -1,6 +1,7 @@
-@extends('app')
+@extends('pages/incollapsed')
 
-@section('content')
+@section('cart')
+
 <div id="content" height="500px">
 <table>
     <thead>
@@ -38,4 +39,5 @@
     </tbody>
       </table>
 </div>
+
 @endsection

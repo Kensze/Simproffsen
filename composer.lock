@@ -627,16 +627,16 @@
         },
         {
             "name": "laravel/homestead",
-            "version": "v2.0.15",
+            "version": "v2.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/homestead.git",
-                "reference": "12b74977978752d260b37eb4a974728a07843f76"
+                "reference": "7139182eb7cccca7a36e2539f66ce069666ad6d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/homestead/zipball/12b74977978752d260b37eb4a974728a07843f76",
-                "reference": "12b74977978752d260b37eb4a974728a07843f76",
+                "url": "https://api.github.com/repos/laravel/homestead/zipball/7139182eb7cccca7a36e2539f66ce069666ad6d4",
+                "reference": "7139182eb7cccca7a36e2539f66ce069666ad6d4",
                 "shasum": ""
             },
             "require": {
@@ -664,7 +664,7 @@
                 }
             ],
             "description": "A virtual machine for web artisans.",
-            "time": "2015-04-12 19:57:52"
+            "time": "2015-04-13 13:36:10"
         },
         {
             "name": "league/flysystem",
