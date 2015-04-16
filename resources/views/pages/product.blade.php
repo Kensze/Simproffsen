@@ -1,8 +1,16 @@
 @extends('app')
 
 @section('content')
-<div id="sidebar-left">
+	
+	<div id="product_item">	
+		@foreach($results as $product)
+			
+			<p>{!! $product->Namn; !!}</p>
+			<p>Märke</p>
+			<p>{!! $product->Pris; !!}</p>
+			
 
-</div>
-
+		@endforeach
+	</div>
 @endsection
+

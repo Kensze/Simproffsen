@@ -19,4 +19,8 @@ Route::post('/cart', 'cartController@index');
 
 Route::post('/cart/update', 'cartController@update');
 
+ Route::get('/product', 'PoductController@index');
+
+
+
 
