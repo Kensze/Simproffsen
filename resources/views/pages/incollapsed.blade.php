@@ -11,6 +11,9 @@
 	</div>
 	<?php if ($_SERVER['REQUEST_URI'] == '/cart'): ?>
 		<?php foreach($cart as $row) :?>
+
+		<p>{!! $row->rowid !!}</p>
+
 		{!! Form::open(array('url' => '/cart/update')) !!}
 	    {!! Form::hidden('id', $row->rowid) !!}
 		<div id="product_id">
@@ -19,7 +22,7 @@
 		</div>
 		<div id="product_count">
 			<p>{!! Form::text('quantity', $row->qty) !!}</p>
-			<p>{!! Form::select('size', array('L' => 'Large', 'S' => 'Small'), $row->size) !!}</p> 
+			<p>{!! Form::select('size', array('L' => 'large', 'S' => 'small'), $row->size) !!}</p>
 		</div>
 		<div id="product_cost_total">
 			<p> {!! $row->subtotal; !!} </p>

@@ -13,14 +13,15 @@
 
 Route::get('/', 'PageController@home');
 
-Route::get('/product/', 'PageController@product');
+Route::get('/cart', 'CartController@index');
 
-Route::post('/cart', 'cartController@index');
+Route::post('/cart', 'CartController@index');
 
-Route::post('/cart/update', 'cartController@update');
-
- Route::get('/product', 'PoductController@index');
+Route::post('/cart/update', 'CartController@update');
 
 
+Route::get('/product', 'ProductController@index');
+
+Route::post('/product/add', 'ProductController@add');
 
 
