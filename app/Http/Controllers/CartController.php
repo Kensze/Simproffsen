@@ -43,8 +43,7 @@ class CartController extends Controller {
     }
      */
 
-    $newQuantity = \Input::get('quantity');
-    Cart::update($id, 22);
+//    $newQuantity = \Input::get('quantity');
 
 
 
