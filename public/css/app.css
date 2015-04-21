@@ -6243,7 +6243,6 @@ label,
 footer{
   width:100%;
   height: auto;
-  float: left;
 
 }
 #left{
@@ -6291,8 +6290,6 @@ footer{
 }
 #content{
   height: auto;
-  float: left;
-  width: 100%;
 }
 #total_box{
   float: right;
@@ -6329,39 +6326,26 @@ footer{
 
 }
 
-.products_container{
+.product_container{
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: 19px;
-  float: left;
-}
-#product_item{
-  width:20%;
-  background-color: #fff;
-  margin-left: 5%;
-  float: left;
 
 }
-.product_img{
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  display: block;
+
+#product_item{
+  border: 1px solid #D1D1D1;
+  width:20%;
+  background-color: #fff;
+
+
 }
-.product_price{
-  width:100%;
-  float: right;
-  height: 20px;
-  text-align: center;
-}
-.product_buttons{
-  width:100%;
-  float: right;
-  height: auto;
-  border-top: 1px solid #d1d1d1;
-  border-bottom: 1px solid #d1d1d1;
-  text-align: center;
-}
-#fav, #to_cart{
-  margin: 5px;
+
+#product_img{
+  
+  
+  margin-left: auto;
+  margin-right: auto;
+  
+ 
 }
