@@ -56,9 +56,6 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-            {!! Form::open(array('url' => '/cart')) !!}
-            {!! Form::submit('uppadatera') !!}
-            {!! Form::close() !!}
             <li><a class="btn btn-primary" href="#">Kontakt</a></li>
             <li><a class="btn btn-primary" href="#">Om oss</a></li>
             <li><a data-toggle="collapse" href="#collapsecart" aria-expanded="false" aria-control="collapsecart" <span class="glyphicon glyphicon-shopping-cart"></span></a></li>

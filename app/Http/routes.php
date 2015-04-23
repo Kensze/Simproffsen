@@ -13,10 +13,7 @@
 
 Route::get('/', 'PageController@home');
 
-Route::get('/product/', 'PageController@product');
-
-Route::post('/cart', 'cartController@index');
-
-// Route::post('/cart/update', 'cartController@update');
+Route::controller('cart', 'CartController');
+Route::controller('product', 'ProductController');
 
 
