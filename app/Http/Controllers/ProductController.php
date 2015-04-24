@@ -41,7 +41,7 @@ class ProductController extends Controller {
 
      
 
-     // return \Redirect::to('/product');
+      return \Redirect::to('/product');
   }
 
 
