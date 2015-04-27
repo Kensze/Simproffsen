@@ -26,7 +26,7 @@ class ProductController extends Controller {
 	{
 		 $results = DB::table('Produkter')->get();
 
-		 return View::make('pages.product')->with('results', $results);
+		 return View::make('pages.home')->with('results', $results);
 	}
 
 	public function postAdd(){
