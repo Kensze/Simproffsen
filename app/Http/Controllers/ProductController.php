@@ -11,37 +11,46 @@ use Cart;
 class ProductController extends Controller {
 
 
-	public function __construct() {
-		// parent::__construct();
-		$this->beforeFilter('csrf', array('on'=>'post'));
-		// $this->beforeFilter('auth', array('only'=>array('getIndex', 'postAdd')));
-	}
+  public function __construct() {
+    // parent::__construct();
+    $this->beforeFilter('csrf', array('on'=>'post'));
+    // $this->beforeFilter('auth', array('only'=>array('getIndex', 'postAdd')));
+  }
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function getIndex()
-	{
-		 $results = DB::table('Produkter')->get();
+  /**
+   * Display a listing of the resource.
+   *
+   * @return Response
+   */
+  public function getIndex()
+  {
+    $results = DB::table('Produkter')->get();
 
-		 return View::make('pages.home')->with('results', $results);
-	}
+    return View::make('pages.product')->with('results', $results);
+  }
 
-	public function postAdd(){
+  public function getView($id) {
 
-     $id = \Input::get('id');
-     $newQuantity = \Input::get('quantity');
-     $newSize = \Input::get('Storlek');
-     $productNamn = \Input::get('Namn');
-     $productPris = \Input::get('Pris');
+    $results = DB::table('Produkter')->where('id', $id)->get();
 
-     Cart::add($id, $productNamn, $newQuantity, $productPris, array('size' => $newSize));
+    return View::make('pages.product')->with('results', $results);
 
-     
 
-      return \Redirect::to('/product');
+  }
+
+  public function postAdd(){
+
+    $id = \Input::get('id');
+    $newQuantity = \Input::get('quantity');
+    $newSize = \Input::get('Storlek');
+    $productNamn = \Input::get('Namn');
+    $productPris = \Input::get('Pris');
+
+    Cart::add($id, $productNamn, $newQuantity, $productPris, array('size' => $newSize));
+
+
+
+    return \Redirect::to('/product');
   }
 
 
