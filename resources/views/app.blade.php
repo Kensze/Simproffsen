@@ -37,21 +37,81 @@
         </button>
         <a class="navbar-brand" href="{{ url('/') }}">{!! HTML::image('img/logo.png') !!}</a>
       </div>
+
+
+
+
         <ul class="nav navbar-nav">
           <li>
-            <a class="btn btn-primary">
-              Dam
-            </a>
+            
+              <a class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dam
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role=presentation>
+                <a href="">
+                  Simkläder
+                </a>
+                <a href="">
+                  Simträning
+                </a>
+                <a href="">
+                  Simutrustning
+                </a>
+                <a href="">
+                  Våtdräkt
+                </a>  
+                <a href="">
+                  Triathlonkläder
+                </a>                              
+                </li>                                
+              </ul>
+            
           </li>
           <li>
-            <a class="btn btn-primary">
-              Herr
-            </a>
+              <a class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Herr
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role=presentation>
+                <a href="">
+                  Simkläder
+                </a>
+                <a href="">
+                  Simträning
+                </a>
+                <a href="">
+                  Simutrustning
+                </a>
+                <a href="">
+                  Våtdräkt
+                </a>  
+                <a href="">
+                  Triathlonkläder
+                </a>                              
+                </li>                                
+              </ul>
           </li>				
           <li>
-            <a class="btn btn-primary">
-              Övrigt
-            </a>
+              <a class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Storlekstabell
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li role=presentation>
+                <a href="">
+                  Orca
+                </a>
+                <a href="">
+                  Sailfish
+                </a> 
+                <a href="">
+                  Övrigt
+                </a>
+                </li>                              
+              </ul>
           </li>
         </ul>
 
