@@ -25,6 +25,7 @@
 
 			{!! Form::hidden('quantity', 1) !!}
             {!! Form::hidden('id', $product->id) !!}
+            {!! Form::hidden('base', 'product') !!}
             {!! Form::hidden('Namn', $product->Namn) !!}
             {!! Form::hidden('Pris', $product->Pris) !!}
             

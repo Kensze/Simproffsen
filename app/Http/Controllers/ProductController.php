@@ -45,12 +45,15 @@ class ProductController extends Controller {
     $newSize = \Input::get('Storlek');
     $productNamn = \Input::get('Namn');
     $productPris = \Input::get('Pris');
+    $base = \Input::get('base');
 
     Cart::add($id, $productNamn, $newQuantity, $productPris, array('size' => $newSize));
 
 
-
-    return \Redirect::to('/product');
+    if($base == 'product')
+      return \Redirect::to('/product/view/' .  $id);
+    
+    
   }
 
 
