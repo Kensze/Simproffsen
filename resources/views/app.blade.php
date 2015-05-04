@@ -50,21 +50,12 @@
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                 <li role=presentation>
-                <a href="">
-                  Simkläder
-                </a>
-                <a href="">
-                  Simträning
-                </a>
-                <a href="">
-                  Simutrustning
-                </a>
-                <a href="">
-                  Våtdräkt
-                </a>  
-                <a href="">
-                  Triathlonkläder
-                </a>                              
+                {!! link_to('category/' . "simkladerd", 'Simkläder', $secure = null) !!}
+
+                {!! link_to('category/' . "simtraningd", 'Simträning', $secure = null) !!}
+                {!! link_to('category/' . "simutrustningd", 'Simutrustning', $secure = null) !!}
+                {!! link_to('category/' . "vatdrakterd", 'Våtdräkter', $secure = null) !!}
+                {!! link_to('category/' . "triathlonkladerd", 'Triathlonkläder', $secure = null) !!}
                 </li>                                
               </ul>
             
@@ -76,21 +67,12 @@
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                 <li role=presentation>
-                <a href="">
-                  Simkläder
-                </a>
-                <a href="">
-                  Simträning
-                </a>
-                <a href="">
-                  Simutrustning
-                </a>
-                <a href="">
-                  Våtdräkt
-                </a>  
-                <a href="">
-                  Triathlonkläder
-                </a>                              
+                {!! link_to('category/' . "simkladerh", 'Simkläder', $secure = null) !!}
+
+                {!! link_to('category/' . "simtraningh", 'Simträning', $secure = null) !!}
+                {!! link_to('category/' . "simutrustningh", 'Simutrustning', $secure = null) !!}
+                {!! link_to('category/' . "vatdrakterh", 'Våtdräkter', $secure = null) !!}
+                {!! link_to('category/' . "triathlonkladerh", 'Triathlonkläder', $secure = null) !!}                           
                 </li>                                
               </ul>
           </li>				
@@ -101,15 +83,9 @@
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                 <li role=presentation>
-                <a href="">
-                  Orca
-                </a>
-                <a href="">
-                  Sailfish
-                </a> 
-                <a href="">
-                  Övrigt
-                </a>
+                {!! link_to('category/' . "storlekorca", 'Orca', $secure = null) !!}
+                {!! link_to('category/' . "storleksailfish", 'Sailfish', $secure = null) !!}
+                {!! link_to('category/' . "storlekovrigt", 'Övrigt', $secure = null) !!} 
                 </li>                              
               </ul>
           </li>

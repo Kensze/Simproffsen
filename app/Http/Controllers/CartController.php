@@ -41,7 +41,7 @@ class CartController extends Controller {
 
 
   public function postUpdate(){
-    $id = \input::get('id');
+    $id = \Input::get('id');
     $newQuantity = \input::get('quantity');
 
 

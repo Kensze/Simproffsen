@@ -1,3 +1,15 @@
+
+<div class="well">
+<div id="product_box">
+	<div id="product_id">
+		<p> ID</p>
+	</div>
+	<div id="product_count">
+		<p> Antal </p>
+	</div>
+	<div id="product_cost_total">
+		<p> Totalt </p>
+	</div>
 		<?php foreach($cart as $row) :?>
 		{!! Form::open(array('url' => '/cart/update')) !!}
 	    {!! Form::hidden('id', $row->rowid) !!}
@@ -30,3 +42,22 @@
 	       </tr>
 
    		<?php endforeach;?>
+	<?php echo $_SERVER['REQUEST_URI'];?>
+	
+
+</div>
+<div id="total_box">
+Hejsan
+  
+</div>
+</div>
+<div id="buttons">
+<button type="button" id="trash_cart">
+  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+  Töm varukorgen
+</button>
+<button type="button" id="continue_check_out">
+  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+  Till betalning
+</button>
+</div>

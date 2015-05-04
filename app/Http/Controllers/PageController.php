@@ -21,4 +21,10 @@ class PageController extends Controller {
   {
     return view('pages.product');
   }
+
+
+  public function checkout()
+  {
+    return view('app');
+  }
 }
