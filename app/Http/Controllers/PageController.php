@@ -11,9 +11,8 @@ class PageController extends Controller {
 
   public function home()
   {
-    $results = DB::table('Produkter')->get();
 
-    return View::make('pages.home')->with('results', $results);
+    return View::make('pages.home');
   }
 
 

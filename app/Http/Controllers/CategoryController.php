@@ -10,11 +10,13 @@ use Cart;
 
 class CategoryController extends Controller {
 
+  
+
 	public function getSimkladerd() {
 
     $results = DB::table('Produkter')->where('Kategori_id', 1)->get();
 
-    return View::make('pages.home')->with('results', $results);
+    return View::make('pages.category')->with('results', $results);
 
 
   }
@@ -23,7 +25,7 @@ class CategoryController extends Controller {
 
     $results = DB::table('Produkter')->where('Kategori_id', 2)->get();
 
-    return View::make('pages.home')->with('results', $results);
+    return View::make('pages.category')->with('results', $results);
 
 
   }
@@ -32,7 +34,7 @@ class CategoryController extends Controller {
 
     $results = DB::table('Produkter')->where('Kategori_id', 3)->get();
 
-    return View::make('pages.home')->with('results', $results);
+    return View::make('pages.category')->with('results', $results);
 
 
   }
@@ -41,7 +43,7 @@ class CategoryController extends Controller {
 
     $results = DB::table('Produkter')->where('Kategori_id', 4)->get();
 
-    return View::make('pages.home')->with('results', $results);
+    return View::make('pages.category')->with('results', $results);
 
 
   }
@@ -50,7 +52,7 @@ class CategoryController extends Controller {
 
     $results = DB::table('Produkter')->where('Kategori_id', 5)->get();
 
-    return View::make('pages.home')->with('results', $results);
+    return View::make('pages.category')->with('results', $results);
 
 
   }
@@ -59,7 +61,7 @@ class CategoryController extends Controller {
 
     $results = DB::table('Produkter')->where('Kategori_id', 1)->get();
 
-    return View::make('pages.home')->with('results', $results);
+    return View::make('pages.category')->with('results', $results);
 
 
   }
@@ -68,7 +70,7 @@ class CategoryController extends Controller {
 
     $results = DB::table('Produkter')->where('Kategori_id', 2)->get();
 
-    return View::make('pages.home')->with('results', $results);
+    return View::make('pages.category')->with('results', $results);
 
 
   }
@@ -77,7 +79,7 @@ class CategoryController extends Controller {
 
     $results = DB::table('Produkter')->where('Kategori_id', 3)->get();
 
-    return View::make('pages.home')->with('results', $results);
+    return View::make('pages.category')->with('results', $results);
 
 
   }
@@ -86,7 +88,7 @@ class CategoryController extends Controller {
 
     $results = DB::table('Produkter')->where('Kategori_id', 4)->get();
 
-    return View::make('pages.home')->with('results', $results);
+    return View::make('pages.category')->with('results', $results);
 
 
   }
@@ -95,7 +97,7 @@ class CategoryController extends Controller {
 
     $results = DB::table('Produkter')->where('Kategori_id', 5)->get();
 
-    return View::make('pages.home')->with('results', $results);
+    return View::make('pages.category')->with('results', $results);
 
 
   }
