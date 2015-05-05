@@ -2,7 +2,7 @@
 <div class="well">
 <div id="product_box">
 	<div id="product_id">
-		<p> ID</p>
+		<p> Produkt</p>
 	</div>
 	<div id="product_count">
 		<p> Antal </p>
@@ -39,6 +39,12 @@
 	                  {!! Form::submit('uppadatera') !!}
 	                  {!! Form::close() !!}
 	            </td>
+	            <td>
+	            	{!! Form::open(array('url'=>'cart/delete')) !!}
+	            	{!! Form::hidden('id', $row->rowid) !!}
+					{!! Form::submit('X') !!}
+					{!! Form::close() !!}
+	            </td>
 	       </tr>
 
    		<?php endforeach;?>
@@ -56,7 +62,7 @@ Hejsan
   {!! Form::submit('Töm varukorg',['class' => 'cart_button']) !!}
   {!! Form::close() !!}
 
-  {!! Form::open(array('url'=>'checkout', 'method' => 'get', 'class'=>'glyphicon glyphicon-ok', 'id'=>'continue_check_out')) !!}
+  {!! Form::open(array('url'=>'/checkout', 'method' => 'get', 'class'=>'glyphicon glyphicon-ok', 'id'=>'continue_check_out')) !!}
   {!! Form::submit('Till betalning',['class' => 'cart_button']) !!}
   {!! Form::close() !!}
 </div>

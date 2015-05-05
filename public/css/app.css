@@ -254,6 +254,7 @@ th {
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
 .glyphicon {
   position: relative;
   display: inline-block;
@@ -6472,8 +6473,6 @@ footer{
 .cart_button{
   background: none;
   border: none;
-  font-family: Arial;
-  font-weight: bold;
 }
 
 .section_scroll{

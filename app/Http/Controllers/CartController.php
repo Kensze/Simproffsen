@@ -50,6 +50,14 @@ class CartController extends Controller {
     return \Redirect::to('/cart');
   }
 
+  public function postDelete(){
+    $id = \Input::get('id');
+
+    Cart::remove($id);
+
+    return \Redirect::to('/cart');
+  }
+
   public function postDestroy(){
     Cart::destroy();
 
