@@ -43,7 +43,10 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<a href=".home_text"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
+<div class="section_scroll">
+  
+  <a href="#home_text"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
+</div>
 <p id="home_text">
 
   Hett just nu:

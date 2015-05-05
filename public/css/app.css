@@ -612,7 +612,9 @@ th {
 }
 .glyphicon-chevron-down:before {
   content: "\e114";
-  color: black;
+  color: rgb(66, 184, 221);
+  font-size: 5em;
+  text-align: center;
 }
 .glyphicon-retweet:before {
   content: "\e115";
@@ -6459,7 +6461,7 @@ footer{
   width: 100%;
 }
 
-.home_text{
+#home_text{
   margin-top: 300px;
   text-align: center;
   width: 50%;
@@ -6472,4 +6474,13 @@ footer{
   border: none;
   font-family: Arial;
   font-weight: bold;
+}
+
+.section_scroll{
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+ 
+
 }
