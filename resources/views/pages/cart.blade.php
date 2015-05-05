@@ -56,7 +56,7 @@ Hejsan
   {!! Form::submit('Töm varukorg',['class' => 'cart_button']) !!}
   {!! Form::close() !!}
 
-  {!! Form::open(array('url'=>'checkout', 'class'=>'glyphicon glyphicon-ok', 'id'=>'continue_check_out')) !!}
+  {!! Form::open(array('url'=>'checkout', 'method' => 'get', 'class'=>'glyphicon glyphicon-ok', 'id'=>'continue_check_out')) !!}
   {!! Form::submit('Till betalning',['class' => 'cart_button']) !!}
   {!! Form::close() !!}
 </div>
