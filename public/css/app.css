@@ -6454,7 +6454,6 @@ footer{
 
 }
 
-<<<<<<< HEAD
 .slide_img{
   
   width: 100%;
@@ -6467,6 +6466,10 @@ footer{
   margin-left: auto;
   margin-right: auto;
 }
-=======
 
->>>>>>> 357326835a3d673e4408a97c31ce0f32b2cfe44c
+.cart_button{
+  background: none;
+  border: none;
+  font-family: Arial;
+  font-weight: bold;
+}
