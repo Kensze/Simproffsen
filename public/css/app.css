@@ -6441,3 +6441,10 @@ footer{
   width: 100%;
 
 }
+
+.cart_button{
+  background: none;
+  border: none;
+  font-family: Arial;
+  font-weight: bold;
+}

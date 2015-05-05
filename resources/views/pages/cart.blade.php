@@ -52,12 +52,11 @@ Hejsan
 </div>
 </div>
 <div id="buttons">
-<button type="button" id="trash_cart">
-  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-  Töm varukorgen
-</button>
-<button type="button" id="continue_check_out">
-  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-  Till betalning
-</button>
+  {!! Form::open(array('url'=>'cart/destroy', 'class'=>'glyphicon glyphicon-trash', 'id'=>'trash_cart')) !!}
+  {!! Form::submit('Töm varukorg',['class' => 'cart_button']) !!}
+  {!! Form::close() !!}
+
+  {!! Form::open(array('url'=>'checkout', 'class'=>'glyphicon glyphicon-ok', 'id'=>'continue_check_out')) !!}
+  {!! Form::submit('Till betalning',['class' => 'cart_button']) !!}
+  {!! Form::close() !!}
 </div>
