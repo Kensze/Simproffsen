@@ -8,20 +8,22 @@
 				<div class="product_view_img">
 					<img src="{!! $product->Bild !!}" alt="{!! $product->Namn !!}" class="img-thumbnail">
 
-
+					
 				</div>
 
 				
-				<p class="product_view_price">{!! $product->Pris; !!}</p>
-				<p>{!! Form::select('Storlek', array('S' => 'small', 'L' => 'large'), $product->Storlek) !!}</p>
-				<p class="product_view_desc">{!! $product->Beskrivning !!} {!! Form::submit('Lägg i varukorg') !!}</p>
-				<p class="product_view_stat">Lagerstatus: {!! $product->Lager !!}</p>
+				<div class="product_view_down">
+					{!! $product->Beskrivning !!} {!! Form::submit('Lägg i varukorg') !!}
+					{!! Form::select('Storlek', array('S' => 'small', 'L' => 'large'), $product->Storlek) !!}
+					Lagerstatus: {!! $product->Lager !!}
+					{!! $product->Pris; !!}
+					{!! $product->Namn; !!}
+
+				</div>
+				
 
 			</div>
-		</br>
-			<div id="product_view_name">
-				<p>{!! $product->Namn; !!}</p>
-			</div>
+
 
 			{!! Form::hidden('quantity', 1) !!}
             {!! Form::hidden('id', $product->id) !!}

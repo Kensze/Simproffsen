@@ -6357,10 +6357,16 @@ footer{
   height:auto;
 }
 
+.product_view_down{
+  
+  float: :left;
+  width: 100%;
+}
+
 #product_view_item{
-  text-align: center;
+  
   width:50%;
-  height:auto;
+  height:100%;
   background-color: #F8FAF9;
   margin-left: 2%;
   margin-top: 2%;
@@ -6395,7 +6401,9 @@ footer{
   float: left;
 }
 #content{
-  height: 100%;
+
+  height: auto;
+  
 }
 #total_box{
   float: right;
@@ -6464,7 +6472,7 @@ footer{
 
 #home_text{
   margin-top: 300px;
-  text-align: center;
+
   width: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -6480,6 +6488,10 @@ footer{
   width: 50%;
   margin-left: auto;
   margin-right: auto;
- 
 
+
+}
+
+#h1_home{
+  text-align: center;
 }
