@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -44,12 +46,14 @@
   </a>
 </div>
 <div class="section_scroll">
-  
+  <h1 id="h1_home">Hett just nu</h1>
   <a href="#home_text"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
 </div>
+
+
 <p id="home_text">
 
-  Hett just nu:
+ 
 För första gången någonsin: våtdräkter utvecklade enbart för kvinnor! Kan tyckas märkligt att det här händer först 2015, men nu är det i alla fall verklighet. Självklart är Orca först ut. 
 Modellerna 3.8 Enduro och Sonar finns nu speciellt framtagna för kvinnor. Vid skapandet av dräkterna valde Orca att börja om, lade herrmodellerna åt sidan och byggde flera, nya prototyper varpå man filmade,
  intervjuade och utvärderade. Nästan som vanligt tänker ni, men nej! Den här gången lär Orca kvinnor simma i prototyperna istället för män. Resultatet blev våtdräkter som har en perfekt passform och flytkraft som dessutom på riktigt är anpassad för kvinnokroppen. Du hittar dem i butiken. 
