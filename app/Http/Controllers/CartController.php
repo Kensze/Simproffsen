@@ -42,10 +42,16 @@ class CartController extends Controller {
 
   public function postUpdate(){
     $id = \Input::get('id');
-    $newQuantity = \input::get('quantity');
+    $newQuantity = \Input::get('quantity');
 
 
     Cart::update($id, $newQuantity);
+
+    return \Redirect::to('/cart');
+  }
+
+  public function postDestroy(){
+    Cart::destroy();
 
     return \Redirect::to('/cart');
   }
