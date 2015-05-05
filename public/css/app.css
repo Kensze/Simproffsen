@@ -612,6 +612,7 @@ th {
 }
 .glyphicon-chevron-down:before {
   content: "\e114";
+  color: black;
 }
 .glyphicon-retweet:before {
   content: "\e115";
@@ -5737,6 +5738,11 @@ button.close {
 }
 .carousel {
   position: relative;
+  background: rgba(0, 0, 0, 0.09);
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 .carousel-inner {
   position: relative;
@@ -5817,22 +5823,22 @@ button.close {
   left: 0;
   bottom: 0;
   width: 15%;
-  opacity: 0.5;
+  opacity: 1;
   filter: alpha(opacity=50);
-  font-size: 20px;
+  font-size:2em;
   color: #ffffff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 .carousel-control.left {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
 }
 .carousel-control.right {
   left: auto;
   right: 0;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
@@ -5844,6 +5850,9 @@ button.close {
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
+.glyphicon-chevron-left{
+   font-size: 5em;
+}
 .carousel-control .icon-prev,
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-left,
@@ -5852,6 +5861,7 @@ button.close {
   top: 50%;
   z-index: 5;
   display: inline-block;
+
 }
 .carousel-control .icon-prev,
 .carousel-control .glyphicon-chevron-left {
@@ -5906,7 +5916,7 @@ button.close {
   background-color: #ffffff;
 }
 .carousel-caption {
-  position: absolute;
+  position:absolute;
   left: 15%;
   right: 15%;
   bottom: 20px;
@@ -5915,7 +5925,9 @@ button.close {
   padding-bottom: 20px;
   color: #ffffff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+  font-size:5em;
+  
 }
 .carousel-caption .btn {
   text-shadow: none;
@@ -5928,7 +5940,7 @@ button.close {
     width: 30px;
     height: 30px;
     margin-top: -15px;
-    font-size: 30px;
+    font-size: 2em;
   }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
@@ -6380,7 +6392,7 @@ footer{
   float: left;
 }
 #content{
-  height: 500px;
+  height: 100%;
 }
 #total_box{
   float: right;
@@ -6436,8 +6448,21 @@ footer{
 }
 
 
-#payment-div {
+#payment_div {
   margin-left: 20%;
   width: 100%;
 
+}
+
+.slide_img{
+  
+  width: 100%;
+}
+
+.home_text{
+  margin-top: 300px;
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
