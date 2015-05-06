@@ -26,4 +26,9 @@ class PageController extends Controller {
   {
     return view('app');
   }
+
+    public function footer()
+  {
+    return view('footer');
+  }
 }

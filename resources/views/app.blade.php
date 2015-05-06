@@ -51,7 +51,6 @@
               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                 <li role=presentation>
                 {!! link_to('category/' . "simkladerd", 'Simkläder', $secure = null) !!}
-
                 {!! link_to('category/' . "simtraningd", 'Simträning', $secure = null) !!}
                 {!! link_to('category/' . "simutrustningd", 'Simutrustning', $secure = null) !!}
                 {!! link_to('category/' . "vatdrakterd", 'Våtdräkter', $secure = null) !!}
@@ -68,7 +67,6 @@
               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                 <li role=presentation>
                 {!! link_to('category/' . "simkladerh", 'Simkläder', $secure = null) !!}
-
                 {!! link_to('category/' . "simtraningh", 'Simträning', $secure = null) !!}
                 {!! link_to('category/' . "simutrustningh", 'Simutrustning', $secure = null) !!}
                 {!! link_to('category/' . "vatdrakterh", 'Våtdräkter', $secure = null) !!}
@@ -104,16 +102,35 @@
   <div id="content">
   @yield('content')
   </div>
-  <footer>
+    <footer>
     <hr />
     <div id="left">
-      <p>Hej</p>
+      <p><h1>Dam</h1></p>
+      <p>Simklader</p>
+      <p>Simträning</p>
+      <p>Simutrustning</p>
+      <p>Våtdräkter</p>
+      <p>Triathlonkläder</p>
+
+      
     </div>
     <div id="right">
-      <p>Hejsan</p>
-      <p>HEEEEEJ</p>
+      <p><h1>Herr</h1></p>
+      <p>Simklader</p>
+      <p>Simträning</p>
+      <p>Simutrustning</p>
+      <p>Våtdräkter</p>
+      <p>Triathlonkläder</p>
+    </div>
+
+    <div id="mid">
+      <p><h1>Storklekstabell</h1></p>
+      <p>Orca</p>
+      <p>Sailfish</p>
+      <p>Övrigt</p>
     </div>
   </footer>
+  
 <!-- Scripts -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>

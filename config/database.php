@@ -55,9 +55,9 @@ return [
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'Simprofssen',
-			'username'  => 'homestead',
-			'password'  => 'secret',
+			'database'  => 'Simproffsen',
+			'username'  => 'root',
+			'password'  => 'larrxi91',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
