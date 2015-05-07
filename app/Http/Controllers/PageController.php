@@ -16,7 +16,7 @@ class PageController extends Controller {
   }
 
 
-  public function product()
+  public function getProduct()
   {
     return view('pages.product');
   }
@@ -27,8 +27,15 @@ class PageController extends Controller {
     return view('pages.checkout');
   }
 
-    public function footer()
+  public function confirm()
+  {
+    return view('pages.confirm');
+  }
+
+  public function footer()
   {
     return view('footer');
   }
+
+    
 }

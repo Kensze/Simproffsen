@@ -36,7 +36,7 @@ class CartController extends Controller {
 
 
     // return View::make('app')->with('cart', $cart);
-    return View::make('cart', array('cart' => $cart));
+    return View::make('pages.cart', array('cart' => $cart));
   }
 
 

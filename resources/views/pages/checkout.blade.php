@@ -19,7 +19,8 @@
          'paymentcollection': "1",
          'iframeheight': "400",
          'iframewidth': "360",
-         'accepturl': "http://homestead.app/confirm"
+         'accepturl': "http://homestead.app/confirm",
+         'callbackurl': "http://homestead.app/confirm"
      });
      paymentwindow.append('payment-div');
      paymentwindow.open();
