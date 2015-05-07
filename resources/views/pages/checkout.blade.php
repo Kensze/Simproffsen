@@ -31,4 +31,5 @@
      paymentwindow.append('payment-div');
      paymentwindow.open();
  </script>
+ 
  @endsection

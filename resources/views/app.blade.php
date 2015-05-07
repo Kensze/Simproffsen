@@ -49,11 +49,11 @@
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                 <li role=presentation>
-                {!! link_to('category/' . "simkladerd", 'Simkläder', $secure = null) !!}
-                {!! link_to('category/' . "simtraningd", 'Simträning', $secure = null) !!}
-                {!! link_to('category/' . "simutrustningd", 'Simutrustning', $secure = null) !!}
-                {!! link_to('category/' . "vatdrakterd", 'Våtdräkter', $secure = null) !!}
-                {!! link_to('category/' . "triathlonkladerd", 'Triathlonkläder', $secure = null) !!}
+                {!! link_to('category/dam/' . "Simkläder", 'Simkläder', $secure = null) !!}
+                {!! link_to('category/dam/' . "Simträning", 'Simträning', $secure = null) !!}
+                {!! link_to('category/dam/' . "Simutrustning", 'Simutrustning', $secure = null) !!}
+                {!! link_to('category/dam/' . "Våtdräkter", 'Våtdräkter', $secure = null) !!}
+                {!! link_to('category/dam/' . "Triathlonkläder", 'Triathlonkläder', $secure = null) !!}
                 </li>                                
               </ul>
             
@@ -65,11 +65,11 @@
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                 <li role=presentation>
-                {!! link_to('category/' . "simkladerh", 'Simkläder', $secure = null) !!}
-                {!! link_to('category/' . "simtraningh", 'Simträning', $secure = null) !!}
-                {!! link_to('category/' . "simutrustningh", 'Simutrustning', $secure = null) !!}
-                {!! link_to('category/' . "vatdrakterh", 'Våtdräkter', $secure = null) !!}
-                {!! link_to('category/' . "triathlonkladerh", 'Triathlonkläder', $secure = null) !!}                           
+                {!! link_to('category/herr/' . "Simkläder", 'Simkläder', $secure = null) !!}
+                {!! link_to('category/herr/' . "Simträning", 'Simträning', $secure = null) !!}
+                {!! link_to('category/herr/' . "Simutrustning", 'Simutrustning', $secure = null) !!}
+                {!! link_to('category/herr/' . "Våtdräkter", 'Våtdräkter', $secure = null) !!}
+                {!! link_to('category/herr/' . "Triathlonkläder", 'Triathlonkläder', $secure = null) !!}                           
                 </li>                                
               </ul>
           </li>				
@@ -80,9 +80,9 @@
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                 <li role=presentation>
-                {!! link_to('category/' . "storlekorca", 'Orca', $secure = null) !!}
-                {!! link_to('category/' . "storleksailfish", 'Sailfish', $secure = null) !!}
-                {!! link_to('category/' . "storlekovrigt", 'Övrigt', $secure = null) !!} 
+                {!! link_to('category/ovrigt/' . "storlekorca", 'Orca', $secure = null) !!}
+                {!! link_to('category/ovrigt/' . "storleksailfish", 'Sailfish', $secure = null) !!}
+                {!! link_to('category/ovrigt/' . "storlekövrigt", 'Övrigt', $secure = null) !!} 
                 </li>                              
               </ul>
           </li>
@@ -105,28 +105,28 @@
     <hr />
     <div id="left">
       <p><h1>Dam</h1></p>
-      <p>{!! link_to('category/' . "simkladerd", 'Simkläder', $secure = null) !!}</p>
-      <p>{!! link_to('category/' . "simtraningd", 'Simträning', $secure = null) !!}</p>
-      <p>{!! link_to('category/' . "simutrustningd", 'Simutrustning', $secure = null) !!}</p>
-      <p>{!! link_to('category/' . "vatdrakterd", 'Våtdräkter', $secure = null) !!}</p>
-      <p>{!! link_to('category/' . "triathlonkladerd", 'Triathlonkläder', $secure = null) !!}</p>
+      <p>{!! link_to('category/dam/' . "Simkläder", 'Simkläder', $secure = null) !!}</p>
+      <p>{!! link_to('category/dam/' . "Simträning", 'Simträning', $secure = null) !!}</p>
+      <p>{!! link_to('category/dam/' . "Simutrustning", 'Simutrustning', $secure = null) !!}</p>
+      <p>{!! link_to('category/dam/' . "Våtdräkter", 'Våtdräkter', $secure = null) !!}</p>
+      <p>{!! link_to('category/dam/' . "Triathlonkläder", 'Triathlonkläder', $secure = null) !!}</p>
 
       
     </div>
     <div id="right">
       <p><h1>Herr</h1></p>
-      <p>{!! link_to('category/' . "simkladerh", 'Simkläder', $secure = null) !!}</p>
-      <p>{!! link_to('category/' . "simtraningh", 'Simträning', $secure = null) !!}</p>
-      <p>{!! link_to('category/' . "simutrustningh", 'Simutrustning', $secure = null) !!}</p>
-      <p>{!! link_to('category/' . "vatdrakterh", 'Våtdräkter', $secure = null) !!}</p>
-      <p>{!! link_to('category/' . "triathlonkladerh", 'Triathlonkläder', $secure = null) !!}</p>
+      <p>{!! link_to('category/herr/' . "Simkläder", 'Simkläder', $secure = null) !!}</p>
+      <p>{!! link_to('category/herr/' . "Simträning", 'Simträning', $secure = null) !!}</p>
+      <p>{!! link_to('category/herr/' . "Simutrustning", 'Simutrustning', $secure = null) !!}</p>
+      <p>{!! link_to('category/herr/' . "Våtdräkter", 'Våtdräkter', $secure = null) !!}</p>
+      <p>{!! link_to('category/herr/' . "Triathlonkläder", 'Triathlonkläder', $secure = null) !!} </p>
     </div>
 
     <div id="mid">
       <p><h1>Storklekstabell</h1></p>
-      <p>{!! link_to('category/' . "storlekorca", 'Orca', $secure = null) !!}</p>
-      <p>{!! link_to('category/' . "storleksailfish", 'Sailfish', $secure = null) !!}</p>
-      <p>{!! link_to('category/' . "storlekovrigt", 'Övrigt', $secure = null) !!}</p> 
+      <p>{!! link_to('category/ovrigt/' . "storlekorca", 'Orca', $secure = null) !!}</p>
+      <p>{!! link_to('category/ovrigt/' . "storleksailfish", 'Sailfish', $secure = null) !!}</p>
+      <p>{!! link_to('category/ovrigt/' . "storlekövrigt", 'Övrigt', $secure = null) !!}</p> 
     </div>
   </footer>
   

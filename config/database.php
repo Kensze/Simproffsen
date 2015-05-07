@@ -55,7 +55,7 @@ return [
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'Simprofssen',
+			'database'  => 'Simproffsen',
 			'username'  => 'homestead',
 			'password'  => 'secret',
 			'charset'   => 'utf8',
