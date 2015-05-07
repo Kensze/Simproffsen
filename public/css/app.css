@@ -6351,22 +6351,17 @@ footer{
 .product_view_img > img{
   
   margin-left: 1%;
-  width:10%;
+  width:20%;
 
 }
 
 .product_view_desc{
   margin-top: 2%;
-  float: left;
+  width: 40%;
 }
 
 .product_view_rest{
   margin-top: 5%;
-
-  
-  
-  
-
 }
 
 #product_view_item{
@@ -6437,7 +6432,7 @@ footer{
 #product_item{
   
   width:12%;
-  
+  margin-bottom: 10%;
   margin-left: 10%;
   margin-top: 2%;
   text-align: center;

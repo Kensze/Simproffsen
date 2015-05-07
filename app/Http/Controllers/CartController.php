@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Cart;
 use View;
+use DB;
 
 class CartController extends Controller {
 

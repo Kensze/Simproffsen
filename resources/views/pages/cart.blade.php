@@ -16,7 +16,8 @@
 		{!! Form::open(array('url' => '/cart/update')) !!}
 	    {!! Form::hidden('id', $row->rowid) !!}
 		<div id="product_id">
-			<p>{!! $row->name; !!}</p>
+				<img src="{!! $row->options->img !!}">
+						<p>{!! $row->name; !!}</p>
 		</div>
 		<div id="product_count">
 			<p></p>

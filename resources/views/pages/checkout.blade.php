@@ -3,8 +3,13 @@
 @section('content')
 <?php 
 	
-	$amount = Cart::total() . '';
+	$amount = Cart::total() . '00';
 	$value = str_replace('.', '', $amount);
+    $description = "";
+
+    foreach (Cart::content() as $product){
+        $description = $description . 'Product: ' . $product->name . ' Storlek: ' . $product->options->size . ' Antal: ' . $product->qty . ' : ';
+    }
  ?>
 
 
@@ -17,8 +22,9 @@
          'currency': "SEK",
          'windowstate': "4",
          'paymentcollection': "1",
-         'iframeheight': "400",
-         'iframewidth': "360",
+         'iframeheight': "800",
+         'iframewidth': "600",
+         'description': "{!! $description !!}",
          'accepturl': "http://homestead.app/confirm",
          'callbackurl': "http://homestead.app/confirm"
      });

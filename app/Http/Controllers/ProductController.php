@@ -46,8 +46,9 @@ class ProductController extends Controller {
     $productNamn = \Input::get('Namn');
     $productPris = \Input::get('Pris');
     $base = \Input::get('base');
+    $img = DB::table('Produkter')->where('id', $id)->pluck('Bild');
 
-    Cart::add($id, $productNamn, $newQuantity, $productPris, array('size' => $newSize));
+    Cart::add($id, $productNamn, $newQuantity, $productPris, array('size' => $newSize, 'img' => $img));
 
 
     if($base == 'product')
