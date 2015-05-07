@@ -1,3 +1,6 @@
+@extends('app')
+
+@section('content')
 <?php 
 	
 	$amount = Cart::total() . '';
@@ -21,3 +24,4 @@
      paymentwindow.append('payment-div');
      paymentwindow.open();
  </script>
+ @endsection

@@ -79,8 +79,6 @@ sub {
 }
 img {
   border: 0;
-  height: 79px;
-  width: 79px;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -5351,7 +5349,6 @@ a.list-group-item-danger.active:focus {
 }
 #buttons{
     padding: 19px;
-    border-bottom: 2px solid #02B2D8;
 }
 #well_search {
   padding: 19px;
@@ -6492,6 +6489,7 @@ footer{
 
 }
 #trash_cart{
+  word-spacing: -10px;
   background-color: #09AFD8;
   border-radius: 4px;
   border: 1px solid #D1D1D1;
@@ -6500,6 +6498,7 @@ footer{
   color: #fff;
 }
 #continue_check_out{
+  word-spacing: -10px;
   background-color: #09AFD8;
   border-radius: 4px;
   border: 1px solid #D1D1D1;
@@ -6508,6 +6507,7 @@ footer{
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   color: #fff;
   float: right;
+  text-decoration: none;
 }
 #trash_cart:hover, #continue_check_out:hover{
   background-color: #0AC2EF;
@@ -6558,6 +6558,7 @@ footer{
 .cart_button{
   background: none;
   border: none;
+  font-family: 
 }
 
 .section_scroll{

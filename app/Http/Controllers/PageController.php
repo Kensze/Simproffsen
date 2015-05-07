@@ -24,7 +24,7 @@ class PageController extends Controller {
 
   public function checkout()
   {
-    return view('app');
+    return view('pages.checkout');
   }
 
     public function footer()

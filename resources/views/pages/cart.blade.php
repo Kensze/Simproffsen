@@ -1,4 +1,6 @@
+@extends('app')
 
+@section('content')
 <div class="well">
 <div id="product_box">
 	<div id="product_id">
@@ -64,3 +66,4 @@ Hejsan
   {!! link_to('/checkout', ' Till betalning', $attributes = array('class'=>'glyphicon glyphicon-ok', 'id'=>'continue_check_out'), $secure = null) !!}
 
 </div>
+@endsection
