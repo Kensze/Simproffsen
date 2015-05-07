@@ -59,7 +59,7 @@ class CategoryController extends Controller {
 
   public function getSimkladerh() {
 
-    $results = DB::table('Produkter')->where('Kategori_id', 1)->get();
+    $results = DB::table('Produkter')->where('Kategori_id', 6)->get();
 
     return View::make('pages.category')->with('results', $results);
 
@@ -68,7 +68,7 @@ class CategoryController extends Controller {
 
   public function getSimtraningh() {
 
-    $results = DB::table('Produkter')->where('Kategori_id', 2)->get();
+    $results = DB::table('Produkter')->where('Kategori_id', 7)->get();
 
     return View::make('pages.category')->with('results', $results);
 
@@ -77,7 +77,7 @@ class CategoryController extends Controller {
 
   public function getSimutrustningh() {
 
-    $results = DB::table('Produkter')->where('Kategori_id', 3)->get();
+    $results = DB::table('Produkter')->where('Kategori_id', 8)->get();
 
     return View::make('pages.category')->with('results', $results);
 
@@ -86,7 +86,7 @@ class CategoryController extends Controller {
 
   public function getVatdrakterh() {
 
-    $results = DB::table('Produkter')->where('Kategori_id', 4)->get();
+    $results = DB::table('Produkter')->where('Kategori_id', 9)->get();
 
     return View::make('pages.category')->with('results', $results);
 
@@ -95,7 +95,7 @@ class CategoryController extends Controller {
 
   public function getTriathlonkladerh() {
 
-    $results = DB::table('Produkter')->where('Kategori_id', 5)->get();
+    $results = DB::table('Produkter')->where('Kategori_id', 10)->get();
 
     return View::make('pages.category')->with('results', $results);
 

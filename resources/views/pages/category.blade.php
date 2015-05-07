@@ -9,7 +9,7 @@
           <img class="" src="{!! $product->Bild !!}" alt="{!! $product->Namn !!}" class="img-thumbnail">
       </p>
       <p id="product_item_name">{!! $product->Namn; !!}</p>
-      <p id="product_item_price">{!! $product->Pris; !!}</p>
+      <p id="product_item_price">{!! $product->Pris; !!} KR</p>
       <button class="btn btn-large btn-cartAdd openbutton">
         {!! link_to('product/view/' . $product->id, 'Till produktsida', $attributes = array('class'=>'btn btn-large btn-cartAdd openbutton'), $secure = null) !!}
       </button>

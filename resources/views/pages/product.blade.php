@@ -16,7 +16,7 @@
 					{!! $product->Beskrivning !!} {!! Form::submit('Lägg i varukorg') !!}
 					{!! Form::select('Storlek', array('S' => 'small', 'L' => 'large'), $product->Storlek) !!}
 					Lagerstatus: {!! $product->Lager !!}
-					{!! $product->Pris; !!}
+					<p>{!! $product->Pris; !!} KR</p>
 					{!! $product->Namn; !!}
 
 				</div>

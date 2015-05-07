@@ -48,7 +48,6 @@
 	       </tr>
 
    		<?php endforeach;?>
-	<?php echo $_SERVER['REQUEST_URI'];?>
 	
 
 </div>
@@ -62,7 +61,6 @@ Hejsan
   {!! Form::submit('Töm varukorg',['class' => 'cart_button']) !!}
   {!! Form::close() !!}
 
-  {!! Form::open(array('url'=>'/checkout', 'method' => 'get', 'class'=>'glyphicon glyphicon-ok', 'id'=>'continue_check_out')) !!}
-  {!! Form::submit('Till betalning',['class' => 'cart_button']) !!}
-  {!! Form::close() !!}
+  {!! link_to('/checkout', ' Till betalning', $attributes = array('class'=>'glyphicon glyphicon-ok', 'id'=>'continue_check_out'), $secure = null) !!}
+
 </div>
