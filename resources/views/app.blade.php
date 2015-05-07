@@ -105,28 +105,28 @@
     <hr />
     <div id="left">
       <p><h1>Dam</h1></p>
-      <p>Simklader</p>
-      <p>Simträning</p>
-      <p>Simutrustning</p>
-      <p>Våtdräkter</p>
-      <p>Triathlonkläder</p>
+      <p>{!! link_to('category/' . "simkladerd", 'Simkläder', $secure = null) !!}</p>
+      <p>{!! link_to('category/' . "simtraningd", 'Simträning', $secure = null) !!}</p>
+      <p>{!! link_to('category/' . "simutrustningd", 'Simutrustning', $secure = null) !!}</p>
+      <p>{!! link_to('category/' . "vatdrakterd", 'Våtdräkter', $secure = null) !!}</p>
+      <p>{!! link_to('category/' . "triathlonkladerd", 'Triathlonkläder', $secure = null) !!}</p>
 
       
     </div>
     <div id="right">
       <p><h1>Herr</h1></p>
-      <p>Simklader</p>
-      <p>Simträning</p>
-      <p>Simutrustning</p>
-      <p>Våtdräkter</p>
-      <p>Triathlonkläder</p>
+      <p>{!! link_to('category/' . "simkladerh", 'Simkläder', $secure = null) !!}</p>
+      <p>{!! link_to('category/' . "simtraningh", 'Simträning', $secure = null) !!}</p>
+      <p>{!! link_to('category/' . "simutrustningh", 'Simutrustning', $secure = null) !!}</p>
+      <p>{!! link_to('category/' . "vatdrakterh", 'Våtdräkter', $secure = null) !!}</p>
+      <p>{!! link_to('category/' . "triathlonkladerh", 'Triathlonkläder', $secure = null) !!}</p>
     </div>
 
     <div id="mid">
       <p><h1>Storklekstabell</h1></p>
-      <p>Orca</p>
-      <p>Sailfish</p>
-      <p>Övrigt</p>
+      <p>{!! link_to('category/' . "storlekorca", 'Orca', $secure = null) !!}</p>
+      <p>{!! link_to('category/' . "storleksailfish", 'Sailfish', $secure = null) !!}</p>
+      <p>{!! link_to('category/' . "storlekovrigt", 'Övrigt', $secure = null) !!}</p> 
     </div>
   </footer>
   
