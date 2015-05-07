@@ -3895,7 +3895,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   line-height: 20px;
   height: 50px;
   padding-left: 15px;
-  padding-top: 5px;
+
+
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -6440,7 +6441,7 @@ footer{
   
   width:12%;
   
-  margin-left: 2%;
+  margin-left: 10%;
   margin-top: 2%;
   text-align: center;
   float: left;
@@ -6543,6 +6544,7 @@ footer{
 .slide_img{
   
   width: 100%;
+
 }
 
 #home_text{
