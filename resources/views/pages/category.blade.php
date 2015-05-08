@@ -7,7 +7,6 @@
     <div id="product_item">	
       <p id="product_item_img">
         <a href="{!! '/product/view/' . $product->id !!}"><img class="" src="{!! $product->Bild !!}" alt="{!! $product->Namn !!}" class="img-thumbnail"></a>
-          
       </p>
       <p id="product_item_name">{!! $product->Namn; !!}</p>
       <p id="product_item_price">{!! $product->Pris; !!} KR</p>

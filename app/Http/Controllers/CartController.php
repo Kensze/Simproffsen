@@ -48,7 +48,7 @@ class CartController extends Controller {
 
     Cart::update($id, $newQuantity);
 
-    return \Redirect::to('/cart');
+    return \Redirect::to('/');
   }
 
   public function postDelete(){
