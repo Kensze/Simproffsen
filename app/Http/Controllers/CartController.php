@@ -37,7 +37,7 @@ class CartController extends Controller {
 
 
     // return View::make('app')->with('cart', $cart);
-    return View::make('pages.cart', array('cart' => $cart));
+    return View::make('app', array('cart' => $cart));
   }
 
 
@@ -59,7 +59,7 @@ class CartController extends Controller {
     return \Redirect::to('/cart');
   }
 
-  public function postDestroy(){
+  public function getDestroy(){
     Cart::destroy();
 
     return \Redirect::to('/cart');
