@@ -35,7 +35,7 @@
 
                     {!! Form::text('size', $row->size) !!}
 
-                    {!! Form::submit('uppadatera') !!}
+                    {!! Form::submit('Uppdatera') !!}
                     {!! Form::close() !!}
               </td>
          </tr>
@@ -44,7 +44,7 @@
 
 </div>
 <div id="total_box">
-Hejsan
+{!! Cart::total() !!} kr
 
 </div>
 </div>

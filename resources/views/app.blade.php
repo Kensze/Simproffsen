@@ -20,7 +20,7 @@
 </head>
 <body>
 <div class="collapse" id="collapsecart">
-  
+@include('pages.incollapsed')
 </div>
 <div class="collapse" id="collapsesearch">
 <input type="text" placeholder="Sök" id="well_search" autofocus />
@@ -42,7 +42,7 @@
 
         <ul class="nav navbar-nav">
           <li>
-            
+
               <a class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dam
                 <span class="caret"></span>
@@ -56,7 +56,7 @@
                 {!! link_to('category/dam/' . "Triathlonkläder", 'Triathlonkläder', $secure = null) !!}
                 </li>                                
               </ul>
-            
+
           </li>
           <li>
               <a class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -111,7 +111,7 @@
       <p>{!! link_to('category/dam/' . "Våtdräkter", 'Våtdräkter', $secure = null) !!}</p>
       <p>{!! link_to('category/dam/' . "Triathlonkläder", 'Triathlonkläder', $secure = null) !!}</p>
 
-      
+
     </div>
     <div id="right">
       <p><h1>Herr</h1></p>
@@ -129,7 +129,7 @@
       <p>{!! link_to('category/ovrigt/' . "storlekövrigt", 'Övrigt', $secure = null) !!}</p> 
     </div>
   </footer>
-  
+
 <!-- Scripts -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>

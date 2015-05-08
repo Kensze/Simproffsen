@@ -16,6 +16,7 @@ Route::get('/checkout', 'PageController@checkout');
 Route::get('/confirm', 'PageController@confirm');
 Route::controller('cart', 'CartController');
 
+Route::controller('cart', 'CartController');
 
 Route::controller('product', 'ProductController');
 Route::controller('category', 'CategoryController');

@@ -10,8 +10,15 @@ use Cart;
 
 class CategoryController extends Controller {
 
-  public function getDam($cat){
-    $results = DB::table('Produkter')->where('Kategori_id', $cat)->get();
+  public function getDam( $cat){
+
+
+    $results = DB::table('Produkter')
+      ->join('Kategori', 'Kategori.id', '=', 'Produkter.Kategori_id')
+      ->join('Storlekstyp', 'Storlekstyp.id', '=', 'Produkter.Storlekstyp_id')
+      ->where('Kategori.Namn', '=' , $cat)
+      ->where('Storlekstyp.Typ', '=' , 'Dam')
+      ->get();
 
     return View::make('pages.category')->with('results', $results);
   }
@@ -19,125 +26,133 @@ class CategoryController extends Controller {
 
   public function getHerr($cat){
     $results = DB::table('Produkter')->where('Kategori_id', $cat)->get();
+    $results = DB::table('Produkter')
+      ->join('Kategori', 'Kategori.id', '=', 'Produkter.Kategori_id')
+      ->join('Storlekstyp', 'Storlekstyp.id', '=', 'Produkter.Storlekstyp_id')
+      ->where('Kategori.Namn', '=' , $cat)
+      ->where('Storlekstyp.Typ', '=' , 'Herr')
+      ->get();
 
     return View::make('pages.category')->with('results', $results);
   }
 
   public function getOvrigt($cat){
-    $results = DB::table('Produkter')->where('Kategori_id', $cat)->get();
-
+    $results = DB::table('Produkter')
+      ->join('Kategori', 'Kategori.id', '=', 'Produkter.Kategori_id')
+      ->where('Kategori.Namn', '=' , $cat)
+      ->get();
     return View::make('pages.category')->with('results', $results);
   }
 
-	// public function getSimkladerd() {
+  // public function getSimkladerd() {
 
- //    $results = DB::table('Produkter')->where('Kategori_id', 1)->get();
+  //    $results = DB::table('Produkter')->where('Kategori_id', 1)->get();
 
- //    return View::make('pages.category')->with('results', $results);
-
-
- //  }
-
- //  public function getSimtraningd() {
-
- //    $results = DB::table('Produkter')->where('Kategori_id', 2)->get();
-
- //    return View::make('pages.category')->with('results', $results);
+  //    return View::make('pages.category')->with('results', $results);
 
 
- //  }
+  //  }
 
- //  public function getSimutrustningd() {
+  //  public function getSimtraningd() {
 
- //    $results = DB::table('Produkter')->where('Kategori_id', 3)->get();
+  //    $results = DB::table('Produkter')->where('Kategori_id', 2)->get();
 
- //    return View::make('pages.category')->with('results', $results);
-
-
- //  }
-
- //  public function getVatdrakterd() {
-
- //    $results = DB::table('Produkter')->where('Kategori_id', 4)->get();
-
- //    return View::make('pages.category')->with('results', $results);
+  //    return View::make('pages.category')->with('results', $results);
 
 
- //  }
+  //  }
 
- //  public function getTriathlonkladerd() {
+  //  public function getSimutrustningd() {
 
- //    $results = DB::table('Produkter')->where('Kategori_id', 5)->get();
+  //    $results = DB::table('Produkter')->where('Kategori_id', 3)->get();
 
- //    return View::make('pages.category')->with('results', $results);
-
-
- //  }
-
- //  public function getSimkladerh() {
-
- //    $results = DB::table('Produkter')->where('Kategori_id', 6)->get();
-
- //    return View::make('pages.category')->with('results', $results);
+  //    return View::make('pages.category')->with('results', $results);
 
 
- //  }
+  //  }
 
- //  public function getSimtraningh() {
+  //  public function getVatdrakterd() {
 
- //    $results = DB::table('Produkter')->where('Kategori_id', 7)->get();
+  //    $results = DB::table('Produkter')->where('Kategori_id', 4)->get();
 
- //    return View::make('pages.category')->with('results', $results);
-
-
- //  }
-
- //  public function getSimutrustningh() {
-
- //    $results = DB::table('Produkter')->where('Kategori_id', 8)->get();
-
- //    return View::make('pages.category')->with('results', $results);
+  //    return View::make('pages.category')->with('results', $results);
 
 
- //  }
+  //  }
 
- //  public function getVatdrakterh() {
+  //  public function getTriathlonkladerd() {
 
- //    $results = DB::table('Produkter')->where('Kategori_id', 9)->get();
+  //    $results = DB::table('Produkter')->where('Kategori_id', 5)->get();
 
- //    return View::make('pages.category')->with('results', $results);
-
-
- //  }
-
- //  public function getTriathlonkladerh() {
-
- //    $results = DB::table('Produkter')->where('Kategori_id', 10)->get();
-
- //    return View::make('pages.category')->with('results', $results);
+  //    return View::make('pages.category')->with('results', $results);
 
 
- //  }
+  //  }
 
- //  public function getStorlekorca() {
+  //  public function getSimkladerh() {
 
- //    return View::make('pages.sizeTable');
+  //    $results = DB::table('Produkter')->where('Kategori_id', 6)->get();
 
-
- //  }
-
- //   public function getStorleksailfish() {
-
- //    return View::make('pages.sizeTable');
+  //    return View::make('pages.category')->with('results', $results);
 
 
- //  }
+  //  }
 
- //   public function getStorlekovrigt() {
+  //  public function getSimtraningh() {
 
- //    return View::make('pages.sizeTable');
+  //    $results = DB::table('Produkter')->where('Kategori_id', 7)->get();
+
+  //    return View::make('pages.category')->with('results', $results);
 
 
- //  }
+  //  }
+
+  //  public function getSimutrustningh() {
+
+  //    $results = DB::table('Produkter')->where('Kategori_id', 8)->get();
+
+  //    return View::make('pages.category')->with('results', $results);
+
+
+  //  }
+
+  //  public function getVatdrakterh() {
+
+  //    $results = DB::table('Produkter')->where('Kategori_id', 9)->get();
+
+  //    return View::make('pages.category')->with('results', $results);
+
+
+  //  }
+
+  //  public function getTriathlonkladerh() {
+
+  //    $results = DB::table('Produkter')->where('Kategori_id', 10)->get();
+
+  //    return View::make('pages.category')->with('results', $results);
+
+
+  //  }
+
+  //  public function getStorlekorca() {
+
+  //    return View::make('pages.sizeTable');
+
+
+  //  }
+
+  //   public function getStorleksailfish() {
+
+  //    return View::make('pages.sizeTable');
+
+
+  //  }
+
+  //   public function getStorlekovrigt() {
+
+  //    return View::make('pages.sizeTable');
+
+
+  //  }
 
 }
