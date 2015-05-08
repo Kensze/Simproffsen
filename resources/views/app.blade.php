@@ -91,7 +91,7 @@
         <ul class="nav navbar-nav navbar-right">
             <li><a class="btn btn-primary" href="#">Kontakt</a></li>
             <li><a class="btn btn-primary" href="#">Om oss</a></li>
-            <li>{!! link_to('cart', '', $attributes = array('class'=>'glyphicon glyphicon-shopping-cart'), $secure = null) !!}</li>
+            <li><a data-toggle="collapse" href="#collapsecart" aria-expanded="false" aria-control="collapsecart" <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
             <li><a data-toggle="collapse" href="#collapsesearch" aria-expanded="false" aria-control="collapsesearch" <span class="glyphicon glyphicon-search"></span></a></li>
         </ul>
     </div>
