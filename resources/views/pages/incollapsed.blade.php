@@ -1,44 +1,51 @@
 <div class="well">
 <div id="product_box">
-  <div id="product_id">
+<!--  <div id="product_id">
     <p> ID</p>
   </div>
   <div id="product_count">
     <p> Antal </p>
   </div>
-  <div id="product_cost_total">
-    <p> Totalt </p>
+    <div id="product_count">
+    <p> Antal </p>
   </div>
+
+-->
+
     <?php foreach($cart as $row) :?>
     {!! Form::open(array('url' => '/cart/update')) !!}
       {!! Form::hidden('id', $row->rowid) !!}
-    <div id="product_id">
-      <p>{!! $row->name; !!}</p>
-    </div>
-    <div id="product_count">
-      <p></p>
-      {!! Form::select('size', array('L' => 'Large', 'S' => 'Small')) !!}
-          {!! Form::text('quantity', $row->qty) !!}
-    </div>
-    <div id="product_cost_total">
-      <p> Totalt </p>
-    </div>
-          <tr>
-              <td>
-                  <p><strong></strong></p>
-                  <p><?php echo ($row->options->has('size') ? $row->size : '');?></p>
-              </td>
-              <td><input type="text" value="<?php echo $row->qty;?>"></td>
-              <td>$<?php echo $row->price;?></td>
-              <td>$<?php echo $row->subtotal;?></td>
-              <td>
+      <div id="product_image">
+        <img src="{!! $row->options->img !!}">
+      </div>
+      <div id="product_id">
+        <p>{!! $row->name; !!}</p>
+      </div>
+      <div id="product_qty">
+        {!! Form::text('quantity', $row->qty) !!}
+      </div>
+      <div id="product_size">
+        {!! Form::select('size', array('L' => 'Large', 'S' => 'Small')) !!}
+      </div>
+      <div id="product_price">
+        $<?php echo $row->price;?>
+      </div>    
+      <div id="product_subtotal">
+        $<?php echo $row->subtotal;?>
+      </div>
+      <div id="product_delete">
+        {!! Form::open(array('url'=>'cart/delete')) !!}
+        {!! Form::hidden('id', $row->rowid) !!}
+        {!! Form::submit('X') !!}
+       
+      </div>
+                    
+      <div id="product_submit">
+        {!! Form::submit('Uppdatera') !!}
+        {!! Form::close() !!}
+      </div>
 
-                    {!! Form::text('size', $row->size) !!}
 
-                    {!! Form::submit('Uppdatera') !!}
-                    {!! Form::close() !!}
-              </td>
-         </tr>
 
       <?php endforeach;?>
 
@@ -53,9 +60,11 @@
   <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
   Töm varukorgen
 </button>
+ <a href="checkout">
 <button type="button" id="continue_check_out">
   <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-  Till betalning
+ Till betalning
 </button>
+</a>
 </div>
 
