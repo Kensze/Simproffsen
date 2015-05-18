@@ -14,6 +14,7 @@ class CategoryController extends Controller {
 
 
     $results = DB::table('Produkter')
+      ->Select('Produkter.*')
       ->join('Kategori', 'Kategori.id', '=', 'Produkter.Kategori_id')
       ->join('Storlekstyp', 'Storlekstyp.id', '=', 'Produkter.Storlekstyp_id')
       ->where('Kategori.Namn', '=' , $cat)
@@ -25,13 +26,15 @@ class CategoryController extends Controller {
 
 
   public function getHerr($cat){
-    $results = DB::table('Produkter')->where('Kategori_id', $cat)->get();
     $results = DB::table('Produkter')
+      ->Select('Produkter.*')
       ->join('Kategori', 'Kategori.id', '=', 'Produkter.Kategori_id')
       ->join('Storlekstyp', 'Storlekstyp.id', '=', 'Produkter.Storlekstyp_id')
       ->where('Kategori.Namn', '=' , $cat)
       ->where('Storlekstyp.Typ', '=' , 'Herr')
       ->get();
+
+
 
     return View::make('pages.category')->with('results', $results);
   }
