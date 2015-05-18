@@ -16,10 +16,10 @@
     {!! Form::open(array('url' => '/cart/update')) !!}
       {!! Form::hidden('id', $row->rowid) !!}
       <div id="product_image">
-        <img src="{!! $row->options->img !!}">
+        <a href="{{URL::to('/product/view/' . $row->id)}}"><img src={{asset($row->options->img)}} alt="Logo"></a>
       </div>
       <div id="product_id">
-        <p>{!! $row->name; !!}</p>
+        <p>  {!! link_to('product/view/' . $row->id, $row->name, $secure = null) !!}</p>
       </div>
       <div id="product_qty">
         {!! Form::text('quantity', $row->qty) !!}
