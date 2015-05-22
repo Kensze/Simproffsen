@@ -1,20 +1,12 @@
 <div class="well">
-<div id="product_box">
-<!--  <div id="product_id">
-    <p> ID</p>
-  </div>
-  <div id="product_count">
-    <p> Antal </p>
-  </div>
-    <div id="product_count">
-    <p> Antal </p>
-  </div>
 
--->
-{!! Cart::content() !!}
+
+
+
 
     <?php foreach($cart as $row) :?>
     {!! Form::open(array('url' => '/cart/update')) !!}
+    <div id="product_box">
       {!! Form::hidden('id', $row->rowid) !!}
       <div id="product_image">
         <a href="{{URL::to('/product/view/' . $row->id)}}"><img src={{asset($row->options->img)}} alt="Logo"></a>
@@ -26,43 +18,51 @@
         {!! Form::text('quantity', $row->qty) !!}
       </div>
       <div id="product_size">
-        {!! Form::select('size', $row->options->sizes, $row->options->size) !!}
-        {!! Form::select('color', $row->options->colors, $row->options->color) !!}
+        {!! Form::select('size', array('L' => 'Large', 'S' => 'Small')) !!}
       </div>
       <div id="product_price">
-        $<?php echo $row->price;?>
+        {!! $row->price !!} :-
       </div>    
       <div id="product_subtotal">
-        $<?php echo $row->subtotal;?>
+        {!! $row->subtotal !!} :-
       </div>
-      
-                    
-      <div id="product_submit">
-        {!! Form::submit('Uppdatera') !!}
-        {!! Form::close() !!}
 
+      <div id="product_submit">
+        {!! Form::submit('Uppdatera', array('id' => 'trash_cart')) !!}
+        {!! Form::close() !!}
       </div>
+
       <div id="product_delete">
         {!! Form::open(array('url'=>'cart/delete')) !!}
         {!! Form::hidden('id', $row->rowid) !!}
-        {!! Form::submit('X') !!}
+        {!! Form::submit('X', array('id' => 'trash_cart')) !!}
         {!! Form::close() !!}
+       
       </div>
+                    
 
-      <?php endforeach;?>
 
 </div>
+
+    <?php endforeach;?>
+
+
 <div id="total_box">
-{!! Cart::total() !!} kr
+  <p><h1>TOTALT</h1></p>
+  {!! Cart::total() !!} kr
 
 </div>
 </div>
 <div id="buttons">
-  {!! Form::open(array('url'=>'cart/destroy', 'class'=>'glyphicon glyphicon-trash', 'id'=>'trash_cart')) !!}
-  {!! Form::submit('Töm varukorg',['class' => 'cart_button']) !!}
-  {!! Form::close() !!}
-
-  {!! link_to('/checkout', ' Till betalning', $attributes = array('class'=>'glyphicon glyphicon-ok', 'id'=>'continue_check_out'), $secure = null) !!}
-
+  <button type="button" id="trash_cart">
+    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+      Töm varukorgen
+  </button>
+  <a href="/checkout">
+    <button type="button" id="continue_check_out">
+    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+      Till betalning
+    </button>
+  </a>
 </div>
 
