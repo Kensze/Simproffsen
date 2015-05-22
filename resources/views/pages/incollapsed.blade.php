@@ -11,6 +11,7 @@
   </div>
 
 -->
+{!! Cart::content() !!}
 
     <?php foreach($cart as $row) :?>
     {!! Form::open(array('url' => '/cart/update')) !!}
@@ -25,7 +26,8 @@
         {!! Form::text('quantity', $row->qty) !!}
       </div>
       <div id="product_size">
-        {!! Form::select('size', array('L' => 'Large', 'S' => 'Small')) !!}
+        {!! Form::select('size', $row->options->sizes, $row->options->size) !!}
+        {!! Form::select('color', $row->options->colors, $row->options->color) !!}
       </div>
       <div id="product_price">
         $<?php echo $row->price;?>
@@ -33,19 +35,19 @@
       <div id="product_subtotal">
         $<?php echo $row->subtotal;?>
       </div>
-      <div id="product_delete">
-        {!! Form::open(array('url'=>'cart/delete')) !!}
-        {!! Form::hidden('id', $row->rowid) !!}
-        {!! Form::submit('X') !!}
-       
-      </div>
+      
                     
       <div id="product_submit">
         {!! Form::submit('Uppdatera') !!}
         {!! Form::close() !!}
+
       </div>
-
-
+      <div id="product_delete">
+        {!! Form::open(array('url'=>'cart/delete')) !!}
+        {!! Form::hidden('id', $row->rowid) !!}
+        {!! Form::submit('X') !!}
+        {!! Form::close() !!}
+      </div>
 
       <?php endforeach;?>
 
@@ -56,15 +58,11 @@
 </div>
 </div>
 <div id="buttons">
-<button type="button" id="trash_cart">
-  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-  Töm varukorgen
-</button>
- <a href="checkout">
-<button type="button" id="continue_check_out">
-  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
- Till betalning
-</button>
-</a>
+  {!! Form::open(array('url'=>'cart/destroy', 'class'=>'glyphicon glyphicon-trash', 'id'=>'trash_cart')) !!}
+  {!! Form::submit('Töm varukorg',['class' => 'cart_button']) !!}
+  {!! Form::close() !!}
+
+  {!! link_to('/checkout', ' Till betalning', $attributes = array('class'=>'glyphicon glyphicon-ok', 'id'=>'continue_check_out'), $secure = null) !!}
+
 </div>
 

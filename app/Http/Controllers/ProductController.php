@@ -31,29 +31,50 @@ class ProductController extends Controller {
 
   public function getView($id) {
 
-    $results = DB::table('Produkter')->where('id', $id)->get();
-
-    return View::make('pages.product')->with('results', $results);
 
 
+    $results = DB::table('Produkter')
+      ->Select('Produkter.Produkt_ID', 'Produkter.Namn' , 'Produkter.ArtNr' , 'Produkter.Pris' , 'Produkter.Beskrivning' , 'Produkter.Bild' , 'Produkter.Vikt' , 'FinnsI.Antal' , 'Storlekar.Storlek' , 'Farger.Farg')
+      ->join('FinnsI', 'FinnsI.Produkter_Produkt_ID', '=', 'Produkter.Produkt_ID')
+      ->join('Storlekar', 'Storlekar.Storlek_ID', '=', 'FinnsI.Storlekar_Storlek_ID')
+      ->join('Farger', 'Farger.Farg_ID', '=', 'FinnsI.Farger_Farg_ID')
+      ->where('Produkter.Produkt_ID', '=' , $id)
+      ->get();
+
+
+
+
+    return View::make('pages.product')
+                      ->with('results', $results);
   }
 
   public function postAdd(){
 
     $id = \Input::get('id');
     $newQuantity = \Input::get('quantity');
-    $newSize = \Input::get('Storlek');
+    $size = \Input::get('Storlek');
+    $color = \Input::get('Farg');
     $productNamn = \Input::get('Namn');
     $productPris = \Input::get('Pris');
     $base = \Input::get('base');
-    $img = DB::table('Produkter')->where('id', $id)->pluck('Bild');
+    $img = DB::table('Produkter')->where('Produkt_ID', $id)->pluck('Bild');
 
-    Cart::add($id, $productNamn, $newQuantity, $productPris, array('size' => $newSize, 'img' => $img));
+    $results = DB::table('Produkter')
+      ->Select('Produkter.Produkt_ID', 'Produkter.Namn' , 'Produkter.ArtNr' , 'Produkter.Pris' , 'Produkter.Beskrivning' , 'Produkter.Bild' , 'Produkter.Vikt' , 'FinnsI.Antal' , 'Storlekar.Storlek' , 'Farger.Farg')
+      ->join('FinnsI', 'FinnsI.Produkter_Produkt_ID', '=', 'Produkter.Produkt_ID')
+      ->join('Storlekar', 'Storlekar.Storlek_ID', '=', 'FinnsI.Storlekar_Storlek_ID')
+      ->join('Farger', 'Farger.Farg_ID', '=', 'FinnsI.Farger_Farg_ID')
+      ->where('Produkter.Produkt_ID', '=' , $id)
+      ->get();
+
+    $sizes = array_fetch($results, 'Storlek');
+    $colors = array_fetch($results, 'Farg');
+
+    Cart::add($id, $productNamn, $newQuantity, $productPris, array('size' => $size, 'sizes' => $sizes, 'color' => $color, 'colors' => $colors, 'img' => $img));
 
 
     if($base == 'product')
       return \Redirect::to('/product/view/' .  $id);
-    
     
   }
 

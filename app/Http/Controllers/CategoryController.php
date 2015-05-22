@@ -10,15 +10,15 @@ use Cart;
 
 class CategoryController extends Controller {
 
-  public function getDam( $cat){
+
+  public function getDam($cat){
 
 
     $results = DB::table('Produkter')
       ->Select('Produkter.*')
-      ->join('Kategori', 'Kategori.id', '=', 'Produkter.Kategori_id')
-      ->join('Storlekstyp', 'Storlekstyp.id', '=', 'Produkter.Storlekstyp_id')
-      ->where('Kategori.Namn', '=' , $cat)
-      ->where('Storlekstyp.Typ', '=' , 'Dam')
+      ->join('Kategorier', 'Kategorier.Kategori_ID', '=', 'Produkter.Kategorier_Kategori_ID')
+      ->where('Kategorier.Namn', '=' , $cat)
+      ->where('Produkter.Storlekstyp', '=' , 'Dam')
       ->get();
 
     return View::make('pages.category')->with('results', $results);
@@ -28,13 +28,10 @@ class CategoryController extends Controller {
   public function getHerr($cat){
     $results = DB::table('Produkter')
       ->Select('Produkter.*')
-      ->join('Kategori', 'Kategori.id', '=', 'Produkter.Kategori_id')
-      ->join('Storlekstyp', 'Storlekstyp.id', '=', 'Produkter.Storlekstyp_id')
-      ->where('Kategori.Namn', '=' , $cat)
-      ->where('Storlekstyp.Typ', '=' , 'Herr')
+      ->join('Kategorier', 'Kategorier.Kategori_ID', '=', 'Produkter.Kategorier_Kategori_ID')
+      ->where('Kategorier.Namn', '=' , $cat)
+      ->where('Produkter.Storlekstyp', '=' , 'Herr')
       ->get();
-
-
 
     return View::make('pages.category')->with('results', $results);
   }

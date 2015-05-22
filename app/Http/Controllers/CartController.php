@@ -43,10 +43,10 @@ class CartController extends Controller {
 
   public function postUpdate(){
     $id = \Input::get('id');
-    $newQuantity = \Input::get('quantity');
-
-
-    Cart::update($id, $newQuantity);
+    $newQuantity  = \Input::get('quantity');
+    $newSize      = \Input::get('size');
+    $newColor     = \Input::get('color');
+    Cart::update($id, array( 'qty' => $newQuantity, 'options' => array('size' => $newSize, 'color' => $newColor)));
 
     return \Redirect::to('/');
   }
@@ -59,7 +59,7 @@ class CartController extends Controller {
     return \Redirect::to('/cart');
   }
 
-  public function getDestroy(){
+  public function postDestroy(){
     Cart::destroy();
 
     return \Redirect::to('/cart');
